@@ -11,7 +11,7 @@ multidict==6.0.4
 mysql-connector-python==8.1.0
 protobuf==4.21.1
 python-dotenv==1.0.0
-yarl==1.9.3
+yarl==1.9.4
 pydantic
 sqlalchemy==2.0.23
 mysqlclient
