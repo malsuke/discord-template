@@ -1,0 +1,36 @@
+name: Docker compose test
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Checkout And Build
+        run: |
+          docker compose up -d --build
+
+      - name: Check db container status
+        run: |
+          container_status=$(docker ps | grep 'db')
+          if [ -z "$container_status" ]; then
+            echo "Container is not running."
+            exit 1
+          else
+            echo "Container is up and running."
+          fi
+      - name: Check app container status
+        run: |
+          container_status=$(docker ps | grep 'app')
+          if [ -z "$container_status" ]; then
+            echo "Container is not running."
+            exit 1
+          else
+            echo "Container is up and running."
+          fi
