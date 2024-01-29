@@ -10,7 +10,7 @@ idna==3.6
 multidict==6.0.4
 mysql-connector-python==8.1.0
 protobuf==4.21.1
-python-dotenv==1.0.0
+python-dotenv==1.0.1
 yarl==1.9.3
 pydantic
 sqlalchemy==2.0.23
