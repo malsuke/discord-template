@@ -13,5 +13,5 @@ protobuf==4.21.1
 python-dotenv==1.0.0
 yarl==1.9.3
 pydantic
-sqlalchemy==2.0.23
+sqlalchemy==2.0.28
 mysqlclient
